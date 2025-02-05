@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+header {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0;
+  color: #2c3e50;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+a, button {
+  text-decoration: none;
+  color: #64748b;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+a:hover, button:hover {
+  color: #3b82f6;
+  background: #f1f5f9;
+}
+
+.active {
+  color: #3b82f6;
+  background: #eff6ff;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.login-btn, .logout-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.login-btn:hover, .logout-btn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.material-icons {
+  font-size: 1rem;
+}

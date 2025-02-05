@@ -1,0 +1,742 @@
+[
+  {
+    "partInfo" : null,
+    "isFirmwareUpdateMandatory" : false,
+    "productType" : {
+      "type" : "b389",
+      "productInformation" : {
+        "manufacturerName" : "Apple",
+        "modelName" : "",
+        "productIdentifier" : 21760,
+        "vendorIdentifier" : 76,
+        "antennaPower" : 4
+      }
+    },
+    "safeLocations" : [
+      {
+        "type" : 1,
+        "approvalState" : 1,
+        "name" : "Home",
+        "identifier" : "48E48594-533E-4312-89ED-0D497336AB63",
+        "location" : {
+          "positionType" : "safeLocation",
+          "verticalAccuracy" : 80,
+          "longitude" : 5.5894227469725672,
+          "floorLevel" : -1,
+          "isInaccurate" : false,
+          "isOld" : true,
+          "horizontalAccuracy" : 80,
+          "latitude" : 49.582539271813438,
+          "timeStamp" : 1738699468957,
+          "altitude" : 0,
+          "locationFinished" : true
+        },
+        "address" : {
+          "subAdministrativeArea" : "Virton",
+          "label" : "Rue des Acacias 49",
+          "streetAddress" : "49",
+          "countryCode" : "BE",
+          "stateCode" : null,
+          "administrativeArea" : "Luxemburg",
+          "streetName" : "Rue des Acacias",
+          "formattedAddressLines" : [
+            "Rue des Acacias 49",
+            "6760 Virton",
+            "Belgium"
+          ],
+          "mapItemFullAddress" : "Rue des Acacias 49, 6760 Virton",
+          "fullThroroughfare" : "Rue des Acacias 49",
+          "areaOfInterest" : [
+
+          ],
+          "locality" : "Virton",
+          "country" : "Belgium"
+        }
+      }
+    ],
+    "owner" : "owner@localhost",
+    "batteryStatus" : 1,
+    "serialNumber" : "HGPNJ0GWP0GV",
+    "lostModeMetadata" : null,
+    "capabilities" : 734,
+    "identifier" : "55BA9F1D-1ED2-4BFA-B8A5-88BEA4D88E75",
+    "address" : {
+      "subAdministrativeArea" : "Virton",
+      "label" : "Rue des Acacias 49",
+      "streetAddress" : "49",
+      "countryCode" : "BE",
+      "stateCode" : null,
+      "administrativeArea" : "Luxemburg",
+      "streetName" : "Rue des Acacias",
+      "formattedAddressLines" : [
+        "Rue des Acacias 49",
+        "6760 Virton",
+        "Belgium"
+      ],
+      "mapItemFullAddress" : "Rue des Acacias 49, 6760 Virton",
+      "fullThroroughfare" : "Rue des Acacias 49",
+      "areaOfInterest" : [
+
+      ],
+      "locality" : "Virton",
+      "country" : "Belgium"
+    },
+    "location" : {
+      "positionType" : "crowdsourced",
+      "verticalAccuracy" : -1,
+      "longitude" : 5.5895597169485676,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : false,
+      "horizontalAccuracy" : 25.921186916842473,
+      "latitude" : 49.582497958314704,
+      "timeStamp" : 1738698283000,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "productIdentifier" : "DE3DE9FC-A990-4391-B22B-3B1DF35934FA",
+    "isAppleAudioAccessory" : false,
+    "crowdSourcedLocation" : {
+      "positionType" : "crowdsourced",
+      "verticalAccuracy" : -1,
+      "longitude" : 5.5895597169485676,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : false,
+      "horizontalAccuracy" : 25.921186916842473,
+      "latitude" : 49.582497958314704,
+      "timeStamp" : 1738698283000,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "groupIdentifier" : null,
+    "role" : {
+      "name" : "Custom Name",
+      "emoji" : "🚘",
+      "identifier" : 999
+    },
+    "systemVersion" : "2.0.73",
+    "name" : "Corentin’s Car"
+  },
+  {
+    "partInfo" : null,
+    "isFirmwareUpdateMandatory" : false,
+    "productType" : {
+      "type" : "b389",
+      "productInformation" : {
+        "manufacturerName" : "Apple",
+        "modelName" : "",
+        "productIdentifier" : 21760,
+        "vendorIdentifier" : 76,
+        "antennaPower" : 4
+      }
+    },
+    "safeLocations" : [
+      {
+        "type" : 1,
+        "approvalState" : 1,
+        "name" : "Home",
+        "identifier" : "48E48594-533E-4312-89ED-0D497336AB63",
+        "location" : {
+          "positionType" : "safeLocation",
+          "verticalAccuracy" : 80,
+          "longitude" : 5.5894227469725672,
+          "floorLevel" : -1,
+          "isInaccurate" : false,
+          "isOld" : true,
+          "horizontalAccuracy" : 80,
+          "latitude" : 49.582539271813438,
+          "timeStamp" : 1738699468957,
+          "altitude" : 0,
+          "locationFinished" : true
+        },
+        "address" : {
+          "subAdministrativeArea" : "Virton",
+          "label" : "Rue des Acacias 49",
+          "streetAddress" : "49",
+          "countryCode" : "BE",
+          "stateCode" : null,
+          "administrativeArea" : "Luxemburg",
+          "streetName" : "Rue des Acacias",
+          "formattedAddressLines" : [
+            "Rue des Acacias 49",
+            "6760 Virton",
+            "Belgium"
+          ],
+          "mapItemFullAddress" : "Rue des Acacias 49, 6760 Virton",
+          "fullThroroughfare" : "Rue des Acacias 49",
+          "areaOfInterest" : [
+
+          ],
+          "locality" : "Virton",
+          "country" : "Belgium"
+        }
+      }
+    ],
+    "owner" : "owner@localhost",
+    "batteryStatus" : 1,
+    "serialNumber" : "HGPNJ0GQP0GV",
+    "lostModeMetadata" : null,
+    "capabilities" : 734,
+    "identifier" : "DC5DBA9C-0A27-4958-BA64-D9DA605C91AC",
+    "address" : {
+      "subAdministrativeArea" : "Virton",
+      "label" : "Rue des Acacias 49",
+      "streetAddress" : "49",
+      "countryCode" : "BE",
+      "stateCode" : null,
+      "administrativeArea" : "Luxemburg",
+      "streetName" : "Rue des Acacias",
+      "formattedAddressLines" : [
+        "Rue des Acacias 49",
+        "6760 Virton",
+        "Belgium"
+      ],
+      "mapItemFullAddress" : "Rue des Acacias 49, 6760 Virton",
+      "fullThroroughfare" : "Rue des Acacias 49",
+      "areaOfInterest" : [
+
+      ],
+      "locality" : "Virton",
+      "country" : "Belgium"
+    },
+    "location" : {
+      "positionType" : "lastConnected",
+      "verticalAccuracy" : -1,
+      "longitude" : 5.5894666307184222,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : false,
+      "horizontalAccuracy" : 32.353420447701929,
+      "latitude" : 49.582526002494781,
+      "timeStamp" : 1738700386314,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "productIdentifier" : "DE3DE9FC-A990-4391-B22B-3B1DF35934FA",
+    "isAppleAudioAccessory" : false,
+    "crowdSourcedLocation" : {
+      "positionType" : "lastConnected",
+      "verticalAccuracy" : -1,
+      "longitude" : 5.5894666307184222,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : false,
+      "horizontalAccuracy" : 32.353420447701929,
+      "latitude" : 49.582526002494781,
+      "timeStamp" : 1738700386314,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "groupIdentifier" : null,
+    "role" : {
+      "name" : "Custom Name",
+      "emoji" : "⚪️",
+      "identifier" : 999
+    },
+    "systemVersion" : "2.0.73",
+    "name" : "Blanc"
+  },
+  {
+    "partInfo" : {
+      "name" : "Right Bud",
+      "type" : "rightBud",
+      "symbol" : "r.circle.fill"
+    },
+    "isFirmwareUpdateMandatory" : false,
+    "productType" : {
+      "type" : "hawkeye",
+      "productInformation" : {
+        "defaultListIcon" : "https:\/\/statici.icloud.com\/fmipmobile\/deviceImages-9.0\/Accessory\/AirPods_8211-0\/online-sourcelist.png",
+        "defaultHeroIcon3x" : "https:\/\/statici.icloud.com\/fmipmobile\/deviceImages-9.0\/Accessory\/AirPods_8211-0\/online-infobox__3x.png",
+        "vendorIdentifier" : 76,
+        "defaultListIcon2x" : "https:\/\/statici.icloud.com\/fmipmobile\/deviceImages-9.0\/Accessory\/AirPods_8211-0\/online-sourcelist__2x.png",
+        "modelName" : "AirPods",
+        "requiresAudioSafetyAlert" : true,
+        "requiresAdditionalConnectionTime" : true,
+        "defaultListIcon3x" : "https:\/\/statici.icloud.com\/fmipmobile\/deviceImages-9.0\/Accessory\/AirPods_8211-0\/online-sourcelist__3x.png",
+        "productIdentifier" : 8211,
+        "antennaPower" : 4,
+        "defaultHeroIcon" : "https:\/\/statici.icloud.com\/fmipmobile\/deviceImages-9.0\/Accessory\/AirPods_8211-0\/online-infobox.png",
+        "defaultHeroIcon2x" : "https:\/\/statici.icloud.com\/fmipmobile\/deviceImages-9.0\/Accessory\/AirPods_8211-0\/online-infobox__2x.png",
+        "appBundleIdentifier" : "",
+        "manufacturerName" : "Apple"
+      }
+    },
+    "safeLocations" : [
+      {
+        "type" : 1,
+        "approvalState" : 1,
+        "name" : "Home",
+        "identifier" : "48E48594-533E-4312-89ED-0D497336AB63",
+        "location" : {
+          "positionType" : "safeLocation",
+          "verticalAccuracy" : 80,
+          "longitude" : 5.5894227469725672,
+          "floorLevel" : -1,
+          "isInaccurate" : false,
+          "isOld" : true,
+          "horizontalAccuracy" : 80,
+          "latitude" : 49.582539271813438,
+          "timeStamp" : 1738699468957,
+          "altitude" : 0,
+          "locationFinished" : true
+        },
+        "address" : {
+          "subAdministrativeArea" : "Virton",
+          "label" : "Rue des Acacias 49",
+          "streetAddress" : "49",
+          "countryCode" : "BE",
+          "stateCode" : null,
+          "administrativeArea" : "Luxemburg",
+          "streetName" : "Rue des Acacias",
+          "formattedAddressLines" : [
+            "Rue des Acacias 49",
+            "6760 Virton",
+            "Belgium"
+          ],
+          "mapItemFullAddress" : "Rue des Acacias 49, 6760 Virton",
+          "fullThroroughfare" : "Rue des Acacias 49",
+          "areaOfInterest" : [
+
+          ],
+          "locality" : "Virton",
+          "country" : "Belgium"
+        }
+      }
+    ],
+    "owner" : "owner@localhost",
+    "batteryStatus" : 4,
+    "serialNumber" : "H5RGDHJC0360",
+    "lostModeMetadata" : null,
+    "capabilities" : 782,
+    "identifier" : "CC141462-A1C0-42DC-A074-AC62B0F4E6F5",
+    "address" : {
+      "subAdministrativeArea" : "Virton",
+      "label" : "Rue des Acacias 49",
+      "streetAddress" : "49",
+      "countryCode" : "BE",
+      "stateCode" : null,
+      "administrativeArea" : "Luxemburg",
+      "streetName" : "Rue des Acacias",
+      "formattedAddressLines" : [
+        "Rue des Acacias 49",
+        "6760 Virton",
+        "Belgium"
+      ],
+      "mapItemFullAddress" : "Rue des Acacias 49, 6760 Virton",
+      "fullThroroughfare" : "Rue des Acacias 49",
+      "areaOfInterest" : [
+
+      ],
+      "locality" : "Virton",
+      "country" : "Belgium"
+    },
+    "location" : {
+      "positionType" : "localReductiveFilter",
+      "verticalAccuracy" : -1,
+      "longitude" : 5.589516468874189,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : true,
+      "horizontalAccuracy" : 38.543942760288353,
+      "latitude" : 49.582486691259525,
+      "timeStamp" : 1707392544000,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "productIdentifier" : "EAA5E23F-9557-41D3-ADD2-4062F3CAE578",
+    "isAppleAudioAccessory" : true,
+    "crowdSourcedLocation" : {
+      "positionType" : "localReductiveFilter",
+      "verticalAccuracy" : -1,
+      "longitude" : 5.589516468874189,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : true,
+      "horizontalAccuracy" : 38.543942760288353,
+      "latitude" : 49.582486691259525,
+      "timeStamp" : 1707392544000,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "groupIdentifier" : "D1C8B2F8-6463-4736-BB8E-8B04A31630AA",
+    "role" : {
+      "name" : "Custom Name",
+      "emoji" : "😀",
+      "identifier" : 999
+    },
+    "systemVersion" : "96.18.192",
+    "name" : "Right Bud"
+  },
+  {
+    "partInfo" : null,
+    "isFirmwareUpdateMandatory" : false,
+    "productType" : {
+      "type" : "b389",
+      "productInformation" : {
+        "manufacturerName" : "Apple",
+        "modelName" : "",
+        "productIdentifier" : 21760,
+        "vendorIdentifier" : 76,
+        "antennaPower" : 4
+      }
+    },
+    "safeLocations" : [
+      {
+        "type" : 1,
+        "approvalState" : 1,
+        "name" : "Home",
+        "identifier" : "48E48594-533E-4312-89ED-0D497336AB63",
+        "location" : {
+          "positionType" : "safeLocation",
+          "verticalAccuracy" : 80,
+          "longitude" : 5.5894227469725672,
+          "floorLevel" : -1,
+          "isInaccurate" : false,
+          "isOld" : true,
+          "horizontalAccuracy" : 80,
+          "latitude" : 49.582539271813438,
+          "timeStamp" : 1738699468957,
+          "altitude" : 0,
+          "locationFinished" : true
+        },
+        "address" : {
+          "subAdministrativeArea" : "Virton",
+          "label" : "Rue des Acacias 49",
+          "streetAddress" : "49",
+          "countryCode" : "BE",
+          "stateCode" : null,
+          "administrativeArea" : "Luxemburg",
+          "streetName" : "Rue des Acacias",
+          "formattedAddressLines" : [
+            "Rue des Acacias 49",
+            "6760 Virton",
+            "Belgium"
+          ],
+          "mapItemFullAddress" : "Rue des Acacias 49, 6760 Virton",
+          "fullThroroughfare" : "Rue des Acacias 49",
+          "areaOfInterest" : [
+
+          ],
+          "locality" : "Virton",
+          "country" : "Belgium"
+        }
+      }
+    ],
+    "owner" : "owner@localhost",
+    "batteryStatus" : 1,
+    "serialNumber" : "HGPNJ0GDP0GV",
+    "lostModeMetadata" : null,
+    "capabilities" : 734,
+    "identifier" : "E19C4F76-905C-464C-8308-D560A65C90CE",
+    "address" : {
+      "subAdministrativeArea" : "Virton",
+      "label" : "Rue des Acacias 49",
+      "streetAddress" : "49",
+      "countryCode" : "BE",
+      "stateCode" : null,
+      "administrativeArea" : "Luxemburg",
+      "streetName" : "Rue des Acacias",
+      "formattedAddressLines" : [
+        "Rue des Acacias 49",
+        "6760 Virton",
+        "Belgium"
+      ],
+      "mapItemFullAddress" : "Rue des Acacias 49, 6760 Virton",
+      "fullThroroughfare" : "Rue des Acacias 49",
+      "areaOfInterest" : [
+
+      ],
+      "locality" : "Virton",
+      "country" : "Belgium"
+    },
+    "location" : {
+      "positionType" : "lastConnected",
+      "verticalAccuracy" : -1,
+      "longitude" : 5.5894514062902205,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : false,
+      "horizontalAccuracy" : 34.955196467398629,
+      "latitude" : 49.582522994596879,
+      "timeStamp" : 1738700526935,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "productIdentifier" : "DE3DE9FC-A990-4391-B22B-3B1DF35934FA",
+    "isAppleAudioAccessory" : false,
+    "crowdSourcedLocation" : {
+      "positionType" : "lastConnected",
+      "verticalAccuracy" : -1,
+      "longitude" : 5.5894514062902205,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : false,
+      "horizontalAccuracy" : 34.955196467398629,
+      "latitude" : 49.582522994596879,
+      "timeStamp" : 1738700526935,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "groupIdentifier" : null,
+    "role" : {
+      "name" : "Keys",
+      "emoji" : "🔑",
+      "identifier" : 6
+    },
+    "systemVersion" : "2.0.73",
+    "name" : "Corentin’s Keys"
+  },
+  {
+    "partInfo" : null,
+    "isFirmwareUpdateMandatory" : false,
+    "productType" : {
+      "type" : "b389",
+      "productInformation" : {
+        "manufacturerName" : "Apple",
+        "modelName" : "",
+        "productIdentifier" : 21760,
+        "vendorIdentifier" : 76,
+        "antennaPower" : 4
+      }
+    },
+    "safeLocations" : [
+      {
+        "type" : 1,
+        "approvalState" : 1,
+        "name" : "Home",
+        "identifier" : "48E48594-533E-4312-89ED-0D497336AB63",
+        "location" : {
+          "positionType" : "safeLocation",
+          "verticalAccuracy" : 80,
+          "longitude" : 5.5894227469725672,
+          "floorLevel" : -1,
+          "isInaccurate" : false,
+          "isOld" : true,
+          "horizontalAccuracy" : 80,
+          "latitude" : 49.582539271813438,
+          "timeStamp" : 1738699468957,
+          "altitude" : 0,
+          "locationFinished" : true
+        },
+        "address" : {
+          "subAdministrativeArea" : "Virton",
+          "label" : "Rue des Acacias 49",
+          "streetAddress" : "49",
+          "countryCode" : "BE",
+          "stateCode" : null,
+          "administrativeArea" : "Luxemburg",
+          "streetName" : "Rue des Acacias",
+          "formattedAddressLines" : [
+            "Rue des Acacias 49",
+            "6760 Virton",
+            "Belgium"
+          ],
+          "mapItemFullAddress" : "Rue des Acacias 49, 6760 Virton",
+          "fullThroroughfare" : "Rue des Acacias 49",
+          "areaOfInterest" : [
+
+          ],
+          "locality" : "Virton",
+          "country" : "Belgium"
+        }
+      }
+    ],
+    "owner" : "owner@localhost",
+    "batteryStatus" : 1,
+    "serialNumber" : "HGPNJ0GLP0GV",
+    "lostModeMetadata" : null,
+    "capabilities" : 734,
+    "identifier" : "E1589968-2AEE-409E-9AD9-4E9F98138198",
+    "address" : {
+      "subAdministrativeArea" : "Virton",
+      "label" : "Rue des Acacias 49",
+      "streetAddress" : "49",
+      "countryCode" : "BE",
+      "stateCode" : null,
+      "administrativeArea" : "Luxemburg",
+      "streetName" : "Rue des Acacias",
+      "formattedAddressLines" : [
+        "Rue des Acacias 49",
+        "6760 Virton",
+        "Belgium"
+      ],
+      "mapItemFullAddress" : "Rue des Acacias 49, 6760 Virton",
+      "fullThroroughfare" : "Rue des Acacias 49",
+      "areaOfInterest" : [
+
+      ],
+      "locality" : "Virton",
+      "country" : "Belgium"
+    },
+    "location" : {
+      "positionType" : "crowdsourced",
+      "verticalAccuracy" : -1,
+      "longitude" : 5.5894759824204652,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : false,
+      "horizontalAccuracy" : 34.289353849396939,
+      "latitude" : 49.582494804711942,
+      "timeStamp" : 1738698255000,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "productIdentifier" : "DE3DE9FC-A990-4391-B22B-3B1DF35934FA",
+    "isAppleAudioAccessory" : false,
+    "crowdSourcedLocation" : {
+      "positionType" : "crowdsourced",
+      "verticalAccuracy" : -1,
+      "longitude" : 5.5894759824204652,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : false,
+      "horizontalAccuracy" : 34.289353849396939,
+      "latitude" : 49.582494804711942,
+      "timeStamp" : 1738698255000,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "groupIdentifier" : null,
+    "role" : {
+      "name" : "Wallet",
+      "emoji" : "💳",
+      "identifier" : 9
+    },
+    "systemVersion" : "2.0.73",
+    "name" : "Corentin’s Wallet"
+  },
+  {
+    "partInfo" : {
+      "name" : "Left Bud",
+      "type" : "leftBud",
+      "symbol" : "l.circle.fill"
+    },
+    "isFirmwareUpdateMandatory" : false,
+    "productType" : {
+      "type" : "hawkeye",
+      "productInformation" : {
+        "defaultListIcon" : "https:\/\/statici.icloud.com\/fmipmobile\/deviceImages-9.0\/Accessory\/AirPods_8211-0\/online-sourcelist.png",
+        "defaultHeroIcon3x" : "https:\/\/statici.icloud.com\/fmipmobile\/deviceImages-9.0\/Accessory\/AirPods_8211-0\/online-infobox__3x.png",
+        "vendorIdentifier" : 76,
+        "defaultListIcon2x" : "https:\/\/statici.icloud.com\/fmipmobile\/deviceImages-9.0\/Accessory\/AirPods_8211-0\/online-sourcelist__2x.png",
+        "modelName" : "AirPods",
+        "requiresAudioSafetyAlert" : true,
+        "requiresAdditionalConnectionTime" : true,
+        "defaultListIcon3x" : "https:\/\/statici.icloud.com\/fmipmobile\/deviceImages-9.0\/Accessory\/AirPods_8211-0\/online-sourcelist__3x.png",
+        "productIdentifier" : 8211,
+        "antennaPower" : 4,
+        "defaultHeroIcon" : "https:\/\/statici.icloud.com\/fmipmobile\/deviceImages-9.0\/Accessory\/AirPods_8211-0\/online-infobox.png",
+        "defaultHeroIcon2x" : "https:\/\/statici.icloud.com\/fmipmobile\/deviceImages-9.0\/Accessory\/AirPods_8211-0\/online-infobox__2x.png",
+        "appBundleIdentifier" : "",
+        "manufacturerName" : "Apple"
+      }
+    },
+    "safeLocations" : [
+      {
+        "type" : 1,
+        "approvalState" : 1,
+        "name" : "Home",
+        "identifier" : "48E48594-533E-4312-89ED-0D497336AB63",
+        "location" : {
+          "positionType" : "safeLocation",
+          "verticalAccuracy" : 80,
+          "longitude" : 5.5894227469725672,
+          "floorLevel" : -1,
+          "isInaccurate" : false,
+          "isOld" : true,
+          "horizontalAccuracy" : 80,
+          "latitude" : 49.582539271813438,
+          "timeStamp" : 1738699468957,
+          "altitude" : 0,
+          "locationFinished" : true
+        },
+        "address" : {
+          "subAdministrativeArea" : "Virton",
+          "label" : "Rue des Acacias 49",
+          "streetAddress" : "49",
+          "countryCode" : "BE",
+          "stateCode" : null,
+          "administrativeArea" : "Luxemburg",
+          "streetName" : "Rue des Acacias",
+          "formattedAddressLines" : [
+            "Rue des Acacias 49",
+            "6760 Virton",
+            "Belgium"
+          ],
+          "mapItemFullAddress" : "Rue des Acacias 49, 6760 Virton",
+          "fullThroroughfare" : "Rue des Acacias 49",
+          "areaOfInterest" : [
+
+          ],
+          "locality" : "Virton",
+          "country" : "Belgium"
+        }
+      }
+    ],
+    "owner" : "owner@localhost",
+    "batteryStatus" : 2,
+    "serialNumber" : "GX7L4APR035Y",
+    "lostModeMetadata" : null,
+    "capabilities" : 782,
+    "identifier" : "C08BE13C-1B92-4651-84C2-3307C15E8871",
+    "address" : {
+      "subAdministrativeArea" : "Virton",
+      "label" : "Rue des Acacias 49",
+      "streetAddress" : "49",
+      "countryCode" : "BE",
+      "stateCode" : null,
+      "administrativeArea" : "Luxemburg",
+      "streetName" : "Rue des Acacias",
+      "formattedAddressLines" : [
+        "Rue des Acacias 49",
+        "6760 Virton",
+        "Belgium"
+      ],
+      "mapItemFullAddress" : "Rue des Acacias 49, 6760 Virton",
+      "fullThroroughfare" : "Rue des Acacias 49",
+      "areaOfInterest" : [
+
+      ],
+      "locality" : "Virton",
+      "country" : "Belgium"
+    },
+    "location" : {
+      "positionType" : "localReductiveFilter",
+      "verticalAccuracy" : -1,
+      "longitude" : 5.5895146527738246,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : true,
+      "horizontalAccuracy" : 40.253106764755437,
+      "latitude" : 49.582482079221442,
+      "timeStamp" : 1707392544000,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "productIdentifier" : "EAA5E23F-9557-41D3-ADD2-4062F3CAE578",
+    "isAppleAudioAccessory" : true,
+    "crowdSourcedLocation" : {
+      "positionType" : "localReductiveFilter",
+      "verticalAccuracy" : -1,
+      "longitude" : 5.5895146527738246,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : true,
+      "horizontalAccuracy" : 40.253106764755437,
+      "latitude" : 49.582482079221442,
+      "timeStamp" : 1707392544000,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "groupIdentifier" : "D1C8B2F8-6463-4736-BB8E-8B04A31630AA",
+    "role" : {
+      "name" : "Custom Name",
+      "emoji" : "😀",
+      "identifier" : 999
+    },
+    "systemVersion" : "96.18.192",
+    "name" : "Left Bud"
+  }
+]
