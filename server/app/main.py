@@ -1,11 +1,12 @@
 from datetime import datetime
 from pathlib import Path
+from typing import List
 
 import pandas as pd
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-from .models import AirTag, AirTagResponse
+from .models import Location
 
 app = FastAPI(title="AirTags Tracker API")
 
@@ -57,10 +58,111 @@ def load_airtags_data():
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error loading data: {str(e)}")
 
-@app.get("/api/airtags", response_model=AirTagResponse)
-async def get_airtags():
+def mock_data():
+    return [
+        Location(
+            datetime=datetime.now(),
+            name="AirTag 1",
+            serialnumber="12345678",
+            producttype="AirTag",
+            batterystatus=100,
+            locationlatitude=49.123456,
+            locationlongitude=5.123456,
+            locationtimestamp=datetime.now(),
+            locationhorizontalaccuracy=10,
+            locationverticalaccuracy=10,
+            addresslabel="Home",
+            addressstreetaddress="Rue du Gouffon",
+            addresslocality="Lille",
+            addresscountry="France"
+        ),
+        Location(
+            datetime=datetime.now(),
+            name="AirTag 2",
+            serialnumber="12345679",
+            producttype="AirTag",
+            batterystatus=100,
+            locationlatitude=49.123457,
+            locationlongitude=5.123457,
+            locationtimestamp=datetime.now(),
+            locationhorizontalaccuracy=10,
+            locationverticalaccuracy=10,
+            addresslabel="Home",
+            addressstreetaddress="Rue du Gouffon",
+            addresslocality="Lille",
+            addresscountry="France"
+        ),
+        Location(
+            datetime=datetime.now(),
+            name="AirTag 3",
+            serialnumber="12345680",
+            producttype="AirTag",
+            batterystatus=100,
+            locationlatitude=49.123458,
+            locationlongitude=5.123458,
+            locationtimestamp=datetime.now(),
+            locationhorizontalaccuracy=10,
+            locationverticalaccuracy=10,
+            addresslabel="Home",
+            addressstreetaddress="Rue du Gouffon",
+            addresslocality="Lille",
+            addresscountry="France"
+        ),
+        Location(
+            datetime=datetime(2024, 6, 23),
+            name="AirTag 1",
+            serialnumber="12345678",
+            producttype="AirTag",
+            batterystatus=100,
+            locationlatitude=49.223456,
+            locationlongitude=5.223456,
+            locationtimestamp=datetime.now(),
+            locationhorizontalaccuracy=10,
+            locationverticalaccuracy=10,
+            addresslabel="Home",
+            addressstreetaddress="Rue du Gouffon",
+            addresslocality="Lille",
+            addresscountry="France"
+        ),
+        Location(
+            datetime=datetime(2024, 6, 24),
+            name="AirTag 1",
+            serialnumber="12345678",
+            producttype="AirTag",
+            batterystatus=100,
+            locationlatitude=49.323456,
+            locationlongitude=5.323456,
+            locationtimestamp=datetime.now(),
+            locationhorizontalaccuracy=10,
+            locationverticalaccuracy=10,
+            addresslabel="Home",
+            addressstreetaddress="Rue du Gouffon",
+            addresslocality="Lille",
+            addresscountry="France"
+        ),
+        Location(
+            datetime=datetime(2024, 6, 25),
+            name="AirTag 1",
+            serialnumber="12345678",
+            producttype="AirTag",
+            batterystatus=100,
+            locationlatitude=49.223456,
+            locationlongitude=5.53456,
+            locationtimestamp=datetime.now(),
+            locationhorizontalaccuracy=10,
+            locationverticalaccuracy=10,
+            addresslabel="Home",
+            addressstreetaddress="Rue du Gouffon",
+            addresslocality="Lille",
+            addresscountry="France"
+        )
+    ]
+
+@app.get("/api/locations", response_model=List[Location])
+async def get_locations():
     """
-    Get all AirTag locations from the CSV file
+    Get all locations from the CSV file
     """
-    airtags = load_airtags_data()
-    return AirTagResponse(locations=airtags)
+    # airtags = load_airtags_data()
+    locations = mock_data()
+    return locations

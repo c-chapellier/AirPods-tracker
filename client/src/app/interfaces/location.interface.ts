@@ -1,4 +1,4 @@
-export interface AirTag {
+export interface Location {
     datetime: string;
     name: string | null;
     serialnumber: string | null;
@@ -13,8 +13,4 @@ export interface AirTag {
     addressstreetaddress: string | null;
     addresslocality: string | null;
     addresscountry: string | null;
-}
-
-export interface AirTagResponse {
-    locations: AirTag[];
 }

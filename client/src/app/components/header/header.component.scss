@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '../../../styles.scss';
 
 header {
-  background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: $black;
 }
 
 .header-content {
@@ -21,7 +21,7 @@ h1 {
   font-size: 1.25rem;
   font-weight: 500;
   margin: 0;
-  color: #2c3e50;
+  color: $black;
 }
 
 nav {
@@ -32,7 +32,7 @@ nav {
 
 a, button {
   text-decoration: none;
-  color: #64748b;
+  color: $black;
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
   transition: all 0.2s ease;
@@ -44,13 +44,13 @@ a, button {
 }
 
 a:hover, button:hover {
-  color: #3b82f6;
-  background: #f1f5f9;
+  color: $blue;
+  background: $white;
 }
 
 .active {
-  color: #3b82f6;
-  background: #eff6ff;
+  color: $blue;
+  background: $white;
 }
 
 button {
@@ -61,14 +61,14 @@ button {
 }
 
 .login-btn, .logout-btn {
-  background: #3b82f6;
-  color: white;
+  background: $blue;
+  color: $white;
   padding: 0.5rem 1rem;
 }
 
 .login-btn:hover, .logout-btn:hover {
-  background: #2563eb;
-  color: white;
+  background: $blue;
+  color: $white;
 }
 
 .material-icons {

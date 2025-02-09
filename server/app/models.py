@@ -1,8 +1,10 @@
-from pydantic import BaseModel
 from datetime import datetime
-from typing import Optional, List
+from typing import Optional
 
-class AirTag(BaseModel):
+from pydantic import BaseModel
+
+
+class Location(BaseModel):
     datetime: datetime
     name: Optional[str] = None
     serialnumber: Optional[str] = None
@@ -17,6 +19,3 @@ class AirTag(BaseModel):
     addressstreetaddress: Optional[str] = None
     addresslocality: Optional[str] = None
     addresscountry: Optional[str] = None
-
-class AirTagResponse(BaseModel):
-    locations: List[AirTag]

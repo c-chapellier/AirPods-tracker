@@ -7,11 +7,10 @@ import { HeaderComponent } from './components/header/header.component';
   imports: [RouterOutlet, HeaderComponent],
   template: `
     <app-header/>
-    <main>
-      <router-outlet/>
-    </main>
+    <router-outlet/>
   `,
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  standalone: true
 })
 export class AppComponent {
   title = 'angular-hello-world';
