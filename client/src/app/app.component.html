@@ -1,0 +1,33 @@
+<div class="content">
+  <div id="map"></div>
+
+  <div class="legend">
+    <div *ngFor="let group of locations() | keyvalue">
+      <div class="location-group" (click)="onLocationGroupClick(group.key)">
+        <div class="location-group-name">
+          <h3>{{ group.value[0].name || "Unknown Device" }}</h3>
+          <!-- <h3>Serial Number: {{ group.key }}</h3> -->
+          <!-- <p>Product Type: {{ group.value[0].producttype }}</p> -->
+        </div>
+        <p>{{ group.value.length }} locations</p>
+      </div>
+
+      @if (this.isGroupOpened()[group.key]) {
+      <div *ngFor="let location of group.value">
+        <div class="location">
+          <div class="header">
+            <p>{{ location.datetime }}</p>
+          </div>
+          <ul>
+            <li>Battery Status: {{ location.batterystatus }}%</li>
+            <li>Location: {{ location.locationlatitude }}, {{ location.locationlongitude }}</li>
+            <li>Accuracy: {{ location.locationhorizontalaccuracy }}m</li>
+            <li>Address: {{ location.addressstreetaddress }}, {{ location.addresslocality }}, {{ location.addresscountry
+              }}</li>
+          </ul>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

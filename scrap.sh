@@ -1,8 +1,11 @@
 #!/bin/bash
 
 ITEMS_FILE="./Items.data"
-CSV_FILE="./scrapped_data.csv"
+CSV_FILE="./client/src/assets/scrapped_data.csv"
 CSV_HEADER="datetime,name,serialnumber,producttype,productindentifier,vendoridentifier,antennapower,systemversion,batterystatus,locationpositiontype,locationlatitude,locationlongitude,locationtimestamp,locationverticalaccuracy,locationhorizontalaccuracy,locationfloorlevel,locationaltitude,locationisinaccurate,locationisold,locationfinished,addresslabel,addressstreetaddress,addresscountrycode,addressstatecode,addressadministrativearea,addressstreetname,addresslocality,addresscountry,addressareaofinteresta,addressareaofinterestb"
+
+# Track last deployment time (initialize to 0 to trigger deployment on first run)
+LAST_DEPLOY_TIME=0
 
 copy_items_data() {
 	echo "Creating a copy of Items.data to prevent potential file corruption"
@@ -23,9 +26,31 @@ create_csv_file() {
 	fi
 }
 
+deploy_application() {
+	echo "Deploying application to GitHub Pages..."
+	if cd client && ng build --base-href=/AirPods-tracker/ && git push origin --delete gh-pages && npx angular-cli-ghpages --dir=dist/; then
+		echo "Application deployed successfully"
+		cd ..
+	else
+		echo "Failed to deploy application" >&2
+		cd ..
+	fi
+}
+
 while true; do
 	copy_items_data
 	create_csv_file
+
+	# Check if an hour has passed since last deployment
+	CURRENT_TIME=$(date +%s)
+	TIME_DIFF=$((CURRENT_TIME - LAST_DEPLOY_TIME))
+	HOUR_IN_SECONDS=3600
+
+	if [ $TIME_DIFF -ge $HOUR_IN_SECONDS ]; then
+		echo "One hour has passed, triggering deployment..."
+		deploy_application
+		LAST_DEPLOY_TIME=$CURRENT_TIME
+	fi
 
 	echo "Checking number of Airtags to process"
 	airtagsnumber=$(jq ".[].serialNumber" "$ITEMS_FILE" | wc -l)
