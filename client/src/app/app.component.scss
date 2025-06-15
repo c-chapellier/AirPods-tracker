@@ -18,6 +18,12 @@
   z-index: 1;
 }
 
+// Custom marker styling
+:host ::ng-deep .custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
 // Toggle button for legend
 .legend-toggle {
   position: fixed;
@@ -134,6 +140,16 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
+    .device-color-indicator {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      margin-right: 12px;
+      border: 2px solid white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+    }
+
     .device-info {
       flex: 1;
 
@@ -185,10 +201,23 @@
     justify-content: space-between;
     margin-bottom: 8px;
 
-    .timestamp {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: #333;
+    .location-timestamp-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .location-color-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .timestamp {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #333;
+      }
     }
 
     .battery {
@@ -261,6 +290,12 @@
   .device-header {
     padding: 12px !important;
 
+    .device-color-indicator {
+      width: 14px;
+      height: 14px;
+      margin-right: 10px;
+    }
+
     .device-info h3 {
       font-size: 0.9rem;
     }
@@ -273,8 +308,19 @@
   .location-item {
     padding: 10px;
 
-    .location-header .timestamp {
-      font-size: 0.8rem;
+    .location-header {
+      .location-timestamp-wrapper {
+        gap: 6px;
+
+        .location-color-dot {
+          width: 6px;
+          height: 6px;
+        }
+
+        .timestamp {
+          font-size: 0.8rem;
+        }
+      }
     }
 
     .detail-row {

@@ -31,6 +31,8 @@
     <div class="legend-content">
       <div class="device-group" *ngFor="let group of locations() | keyvalue">
         <div class="device-header" (click)="onLocationGroupClick(group.key)">
+          <div class="device-color-indicator" [style.background-color]="getDeviceColorForLegend(group.key)">
+          </div>
           <div class="device-info">
             <h3>{{ group.value[0].name || "Unknown Device" }}</h3>
             <span class="location-count">{{ group.value.length }} locations</span>
@@ -46,7 +48,11 @@
         <div class="locations-list">
           <div class="location-item" *ngFor="let location of group.value">
             <div class="location-header">
-              <span class="timestamp">{{ location.datetime | date:'short' }}</span>
+              <div class="location-timestamp-wrapper">
+                <div class="location-color-dot" [style.background-color]="getDeviceColorForLegend(group.key)">
+                </div>
+                <span class="timestamp">{{ location.datetime | date:'short' }}</span>
+              </div>
               <span class="battery" *ngIf="location.batterystatus">
                 {{ location.batterystatus }}%
               </span>

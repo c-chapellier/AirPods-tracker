@@ -12,8 +12,24 @@ import { Location, LocationsService } from "./services/locations.service";
 })
 export class AppComponent implements OnInit {
   private map!: L.Map;
-  private polyline!: L.Polyline;
+  private polylines: Record<string, L.Polyline> = {};
   private markers: L.Marker[] = [];
+  private deviceColors: Record<string, string> = {};
+  private readonly colorPalette = [
+    "#FF4081", // Pink
+    "#3F51B5", // Indigo
+    "#009688", // Teal
+    "#FF5722", // Deep Orange
+    "#9C27B0", // Purple
+    "#673AB7", // Deep Purple
+    "#4CAF50", // Green
+    "#FF9800", // Orange
+    "#795548", // Brown
+    "#607D8B", // Blue Grey
+    "#E91E63", // Pink (different shade)
+    "#2196F3", // Blue
+  ];
+
   public locations = signal<Record<string, Location[]>>({});
   public isGroupOpened = signal<Record<string, boolean>>({});
   public isLegendOpen = signal<boolean>(false);
@@ -59,6 +75,9 @@ export class AppComponent implements OnInit {
   private addLocationToMap(name: string, locations: Location[]): void {
     if (locations.length === 0) return;
 
+    // Get or assign color for this device
+    const deviceColor = this.getDeviceColor(name);
+
     locations.sort(
       (a, b) => new Date(a.datetime).getTime() - new Date(b.datetime).getTime()
     );
@@ -68,12 +87,24 @@ export class AppComponent implements OnInit {
         location.locationlatitude!,
         location.locationlongitude!,
       ];
+
+      // Create custom colored icon
+      const customIcon = L.divIcon({
+        className: "custom-marker",
+        html: `<div style="
+          width: 15px;
+          height: 15px;
+          background-color: ${deviceColor};
+          border: 2px solid white;
+          border-radius: 50%;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        "></div>`,
+        iconSize: [15, 15],
+        iconAnchor: [7, 7],
+      });
+
       const marker = L.marker(latLng, {
-        icon: L.icon({
-          iconUrl: "https://maps.google.com/mapfiles/ms/icons/green-dot.png",
-          iconSize: [15, 15],
-          iconAnchor: [7, 7],
-        }),
+        icon: customIcon,
       }).bindPopup(`
           <h3>${location.name || "Unknown Device"}</h3>
           <p>${location.datetime}</p>
@@ -92,28 +123,41 @@ export class AppComponent implements OnInit {
       );
 
     if (coordinates.length > 1) {
-      if (this.polyline) {
-        this.polyline.remove();
+      // Remove existing polyline for this device if it exists
+      if (this.polylines[name]) {
+        this.polylines[name].remove();
       }
-      this.polyline = L.polyline(coordinates, {
-        color: this.getRandomColor(),
+
+      this.polylines[name] = L.polyline(coordinates, {
+        color: deviceColor,
         weight: 3,
         opacity: 0.7,
       }).addTo(this.map);
-      this.map.fitBounds(this.polyline.getBounds());
+
+      // Fit bounds to show all devices
+      this.fitBoundsToAllDevices();
     }
   }
 
-  private getRandomColor(): string {
-    const colors = [
-      "#FF4081",
-      "#3F51B5",
-      "#009688",
-      "#FF5722",
-      "#9C27B0",
-      "#673AB7",
-    ];
-    return colors[Math.floor(Math.random() * colors.length)];
+  private getDeviceColor(serialNumber: string): string {
+    if (!this.deviceColors[serialNumber]) {
+      const colorIndex =
+        Object.keys(this.deviceColors).length % this.colorPalette.length;
+      this.deviceColors[serialNumber] = this.colorPalette[colorIndex];
+    }
+    return this.deviceColors[serialNumber];
+  }
+
+  private fitBoundsToAllDevices(): void {
+    const allPolylines = Object.values(this.polylines);
+    if (allPolylines.length > 0) {
+      const group = new L.FeatureGroup(allPolylines);
+      this.map.fitBounds(group.getBounds());
+    }
+  }
+
+  public getDeviceColorForLegend(serialNumber: string): string {
+    return this.getDeviceColor(serialNumber);
   }
 
   public onLocationGroupClick(serialNumber: string): void {
