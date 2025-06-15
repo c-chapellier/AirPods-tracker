@@ -1,33 +1,81 @@
-<div class="content">
-  <div id="map"></div>
+<div class="app-container">
+  <!-- Full-screen map -->
+  <div id="map" class="map-container"></div>
 
-  <div class="legend">
-    <div *ngFor="let group of locations() | keyvalue">
-      <div class="location-group" (click)="onLocationGroupClick(group.key)">
-        <div class="location-group-name">
-          <h3>{{ group.value[0].name || "Unknown Device" }}</h3>
-          <!-- <h3>Serial Number: {{ group.key }}</h3> -->
-          <!-- <p>Product Type: {{ group.value[0].producttype }}</p> -->
-        </div>
-        <p>{{ group.value.length }} locations</p>
-      </div>
+  <!-- Toggle button for legend -->
+  <button class="legend-toggle" (click)="toggleLegend()"
+    [attr.aria-label]="isLegendOpen() ? 'Close legend' : 'Open legend'" [attr.aria-expanded]="isLegendOpen()">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+      <line x1="9" x2="9" y1="9" y2="15" />
+      <line x1="15" x2="15" y1="9" y2="15" />
+    </svg>
+  </button>
 
-      @if (this.isGroupOpened()[group.key]) {
-      <div *ngFor="let location of group.value">
-        <div class="location">
-          <div class="header">
-            <p>{{ location.datetime }}</p>
-          </div>
-          <ul>
-            <li>Battery Status: {{ location.batterystatus }}%</li>
-            <li>Location: {{ location.locationlatitude }}, {{ location.locationlongitude }}</li>
-            <li>Accuracy: {{ location.locationhorizontalaccuracy }}m</li>
-            <li>Address: {{ location.addressstreetaddress }}, {{ location.addresslocality }}, {{ location.addresscountry
-              }}</li>
-          </ul>
-        </div>
-      </div>
-      }
+  <!-- Collapsible legend panel -->
+  <div class="legend-panel" [class.open]="isLegendOpen()">
+    <!-- Panel header -->
+    <div class="legend-header">
+      <h2>Device Locations</h2>
+      <button class="close-button" (click)="toggleLegend()" aria-label="Close legend">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
     </div>
+
+    <!-- Legend content -->
+    <div class="legend-content">
+      <div class="device-group" *ngFor="let group of locations() | keyvalue">
+        <div class="device-header" (click)="onLocationGroupClick(group.key)">
+          <div class="device-info">
+            <h3>{{ group.value[0].name || "Unknown Device" }}</h3>
+            <span class="location-count">{{ group.value.length }} locations</span>
+          </div>
+          <svg class="expand-icon" [class.expanded]="isGroupOpened()[group.key]" width="16" height="16"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="6,9 12,15 18,9" />
+          </svg>
+        </div>
+
+        @if (isGroupOpened()[group.key]) {
+        <div class="locations-list">
+          <div class="location-item" *ngFor="let location of group.value">
+            <div class="location-header">
+              <span class="timestamp">{{ location.datetime | date:'short' }}</span>
+              <span class="battery" *ngIf="location.batterystatus">
+                {{ location.batterystatus }}%
+              </span>
+            </div>
+            <div class="location-details">
+              <div class="detail-row">
+                <span class="label">Coordinates:</span>
+                <span class="value">{{ location.locationlatitude | number:'1.4-4' }}, {{ location.locationlongitude |
+                  number:'1.4-4' }}</span>
+              </div>
+              <div class="detail-row" *ngIf="location.locationhorizontalaccuracy">
+                <span class="label">Accuracy:</span>
+                <span class="value">{{ location.locationhorizontalaccuracy }}m</span>
+              </div>
+              <div class="detail-row" *ngIf="location.addressstreetaddress || location.addresslocality">
+                <span class="label">Address:</span>
+                <span class="value">{{ location.addressstreetaddress }}{{ location.addressstreetaddress &&
+                  location.addresslocality ? ', ' : '' }}{{ location.addresslocality }}{{ location.addresscountry ? ', '
+                  + location.addresscountry : '' }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay for mobile when legend is open -->
+  <div class="legend-overlay" [class.visible]="isLegendOpen()" (click)="toggleLegend()">
   </div>
 </div>

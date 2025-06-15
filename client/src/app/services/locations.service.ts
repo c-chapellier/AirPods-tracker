@@ -98,7 +98,7 @@ export class LocationsService {
           addresscountry: addresscountry.trim() || null,
         };
       })
-      .filter((loc): loc is Location => loc !== null);
+      .filter((loc) => loc !== null);
 
     return of(locs);
   }

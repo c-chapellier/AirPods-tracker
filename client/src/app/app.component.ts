@@ -1,5 +1,5 @@
 import { CommonModule } from "@angular/common";
-import { Component, signal } from "@angular/core";
+import { Component, OnInit, signal } from "@angular/core";
 import * as L from "leaflet";
 import { Location, LocationsService } from "./services/locations.service";
 
@@ -10,28 +10,34 @@ import { Location, LocationsService } from "./services/locations.service";
   styleUrl: "./app.component.scss",
   standalone: true,
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   private map!: L.Map;
   private polyline!: L.Polyline;
   private markers: L.Marker[] = [];
   public locations = signal<Record<string, Location[]>>({});
   public isGroupOpened = signal<Record<string, boolean>>({});
+  public isLegendOpen = signal<boolean>(false);
 
   constructor(private locationsService: LocationsService) {}
 
   ngOnInit(): void {
-    this.map = L.map("map").setView([48.8566, 2.3522], 13);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution: " OpenStreetMap contributors",
-    }).addTo(this.map);
+    // Initialize map after view is ready
+    setTimeout(() => {
+      this.map = L.map("map").setView([48.8566, 2.3522], 13);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: " OpenStreetMap contributors",
+      }).addTo(this.map);
 
-    this.locationsService.getLocations().subscribe((locations) => {
-      this.locations.set(this.groupBySerialNumber(locations));
-      Object.entries(this.locations()).forEach(([serialNumber, locations]) => {
-        this.addLocationToMap(serialNumber, locations);
+      this.locationsService.getLocations().subscribe((locations) => {
+        this.locations.set(this.groupBySerialNumber(locations));
+        Object.entries(this.locations()).forEach(
+          ([serialNumber, locations]) => {
+            this.addLocationToMap(serialNumber, locations);
+          }
+        );
       });
-    });
+    }, 100);
   }
 
   public groupBySerialNumber(locations: Location[]): {
@@ -70,7 +76,7 @@ export class AppComponent {
         }),
       }).bindPopup(`
           <h3>${location.name || "Unknown Device"}</h3>
-          <p>${new Date(location.datetime).toLocaleString()}</p>
+          <p>${location.datetime}</p>
           <p>${location.addressstreetaddress}, ${location.addresslocality}</p>
         `);
 
@@ -118,5 +124,13 @@ export class AppComponent {
       ...this.isGroupOpened(),
       [serialNumber]: !this.isGroupOpened()[serialNumber],
     });
+  }
+
+  public toggleLegend(): void {
+    this.isLegendOpen.set(!this.isLegendOpen());
+    // Trigger map resize after panel animation completes
+    setTimeout(() => {
+      this.map.invalidateSize();
+    }, 300);
   }
 }
